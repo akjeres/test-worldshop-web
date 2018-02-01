@@ -26,6 +26,12 @@ $(document).ready(function() {
 			marginTop: 18
 		});
 	}
+	if ($(".center").height() > parameter_2_int($(".center").css("minHeight"))) {
+		$(".left").height($(".center").height());
+	}
+	if ($(".left").height() > parameter_2_int($(".center").css("minHeight"))) {
+		$(".center").height($(".left").height());
+	}
 });
 $(document).resize(function() {
 	if (!($(".wrapper").find("main").length)) {
